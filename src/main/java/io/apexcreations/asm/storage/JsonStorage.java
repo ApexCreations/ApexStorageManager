@@ -4,15 +4,13 @@ import io.apexcreations.asm.ApexStorage;
 
 public class JsonStorage extends ApexStorage {
 
-  public void save() {
+  @Override
+  public void save(Object object) {
 
   }
 
-  public void get() {
-
-  }
-
-  public void delete() {
+  @Override
+  public void load(Object object) {
 
   }
 }

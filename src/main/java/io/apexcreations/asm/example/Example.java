@@ -1,19 +1,18 @@
 package io.apexcreations.asm.example;
 
-import io.apexcreations.asm.annotations.ConfigAnnotation;
+import io.apexcreations.asm.annotations.Config;
 import io.apexcreations.asm.annotations.ConfigValue;
-import io.apexcreations.asm.enums.FileType;
 
-@ConfigAnnotation(path = "%dataFolder%/test", fileType = FileType.YAML)
+@Config(path = "%dataFolder%/test")
 public class Example {
 
+  @ConfigValue(path = "user.name")
   private String userName;
 
   public Example(String userName) {
     this.userName = userName;
   }
 
-  @ConfigValue(path = "user.name")
   public String getUserName() {
     return this.userName;
   }

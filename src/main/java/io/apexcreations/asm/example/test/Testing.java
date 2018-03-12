@@ -6,7 +6,7 @@ public class Testing {
     Test test = new Test("TESTING");
     Class<?> clazz = test.getClass();
 
-    ConfigAnnotation configAnnotation = clazz.getAnnotation(ConfigAnnotation.class);
+    Config configAnnotation = clazz.getAnnotation(Config.class);
     System.out.println(configAnnotation.path());
     System.out.println(configAnnotation.fileType());
 
